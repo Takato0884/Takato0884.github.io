@@ -11057,6 +11057,11 @@ section.resume-section .resume-section-content {
   font-size: 0.9rem;
   color: #495057;
 }
+/* own name in an author list: bold + underlined */
+.pub-authors strong {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 /* Venue / publisher: same size & color as the author line */
 .pub-venue {
   font-size: 0.9rem;
@@ -11067,6 +11072,11 @@ section.resume-section .resume-section-content {
   font-size: 1.05rem;
   vertical-align: -0.05em;
 }
+/* About: affiliation lines match the lead paragraph's size */
+#about .affiliation {
+  font-size: 1.15rem;
+}
+
 #publications .subheading {
   color: #1d3557;
   margin-top: 1rem;
@@ -11074,24 +11084,28 @@ section.resume-section .resume-section-content {
 
 /* Education / Experience: match the 2nd line (degree/dept/company) size to the 1st line */
 #education .subheading,
-#experience .subheading {
+#experience .subheading,
+#awards .subheading {
   font-size: 1.15rem;
 }
 
-/* Timeline for Education & Experience: navy dots connected by a vertical line */
+/* Timeline for Education, Experience & Awards: navy dots connected by a vertical line */
 #education .timeline-item,
-#experience .timeline-item {
+#experience .timeline-item,
+#awards .timeline-item {
   position: relative;
   padding-left: 1.85rem;
   padding-bottom: 1.6rem;
 }
 #education .timeline-item:last-of-type,
-#experience .timeline-item:last-of-type {
+#experience .timeline-item:last-of-type,
+#awards .timeline-item:last-of-type {
   padding-bottom: 0;
 }
 /* connecting line (runs the full height so items join seamlessly) */
 #education .timeline-item::before,
-#experience .timeline-item::before {
+#experience .timeline-item::before,
+#awards .timeline-item::before {
   content: "";
   position: absolute;
   left: 0.36rem;
@@ -11102,17 +11116,20 @@ section.resume-section .resume-section-content {
 }
 /* line starts at the first dot and ends at the last dot */
 #education .timeline-item:first-of-type::before,
-#experience .timeline-item:first-of-type::before {
+#experience .timeline-item:first-of-type::before,
+#awards .timeline-item:first-of-type::before {
   top: 0.65rem;
   height: calc(100% - 0.65rem);
 }
 #education .timeline-item:last-of-type::before,
-#experience .timeline-item:last-of-type::before {
+#experience .timeline-item:last-of-type::before,
+#awards .timeline-item:last-of-type::before {
   height: 0.65rem;
 }
 /* the dot */
 #education .timeline-item::after,
-#experience .timeline-item::after {
+#experience .timeline-item::after,
+#awards .timeline-item::after {
   content: "";
   position: absolute;
   left: 0;
@@ -11122,4 +11139,10 @@ section.resume-section .resume-section-content {
   border-radius: 50%;
   background-color: #1d3557;
   box-shadow: 0 0 0 3px #fff;
+}
+
+/* Awards: paper title + authors shown under the award name */
+#awards .pub-authors {
+  margin-top: 0.35rem;
+  line-height: 1.5;
 }
