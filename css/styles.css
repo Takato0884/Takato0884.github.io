@@ -11094,6 +11094,10 @@ section.resume-section .resume-section-content {
   background-color: #d9efe6;
   color: #226a51;
 }
+.pub-type-if {
+  background-color: #dde6f3;
+  color: #1d3557;
+}
 /* About: affiliation lines match the lead paragraph's size */
 #about .affiliation {
   font-size: 1.15rem;
