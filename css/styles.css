@@ -11072,6 +11072,28 @@ section.resume-section .resume-section-content {
   font-size: 1.05rem;
   vertical-align: -0.05em;
 }
+/* Presentation type tag (Oral / Poster) next to the flag */
+.pub-type {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.1em 0.55em;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  vertical-align: 0.1em;
+}
+.pub-type + .pub-type {
+  margin-left: 0.25rem;
+}
+.pub-type-oral {
+  background-color: #f8dcd9;
+  color: #a1372b;
+}
+.pub-type-poster {
+  background-color: #d9efe6;
+  color: #226a51;
+}
 /* About: affiliation lines match the lead paragraph's size */
 #about .affiliation {
   font-size: 1.15rem;
