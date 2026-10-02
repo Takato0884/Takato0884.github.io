@@ -11103,7 +11103,8 @@ section.resume-section .resume-section-content {
   font-size: 1.15rem;
 }
 
-#publications .subheading {
+#publications .subheading,
+#activities .subheading {
   color: #1d3557;
   margin-top: 1rem;
 }
