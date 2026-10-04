@@ -11116,23 +11116,26 @@ section.resume-section .resume-section-content {
   font-size: 1.15rem;
 }
 
-/* Timeline for Education, Experience & Awards: navy dots connected by a vertical line */
+/* Timeline for Education, Experience, Awards & Activities: navy dots connected by a vertical line */
 #education .timeline-item,
 #experience .timeline-item,
-#awards .timeline-item {
+#awards .timeline-item,
+#activities .timeline-item {
   position: relative;
   padding-left: 1.85rem;
   padding-bottom: 1.6rem;
 }
 #education .timeline-item:last-of-type,
 #experience .timeline-item:last-of-type,
-#awards .timeline-item:last-of-type {
+#awards .timeline-item:last-of-type,
+#activities .timeline-item:last-of-type {
   padding-bottom: 0;
 }
 /* connecting line (runs the full height so items join seamlessly) */
 #education .timeline-item::before,
 #experience .timeline-item::before,
-#awards .timeline-item::before {
+#awards .timeline-item::before,
+#activities .timeline-item::before {
   content: "";
   position: absolute;
   left: 0.36rem;
@@ -11144,19 +11147,22 @@ section.resume-section .resume-section-content {
 /* line starts at the first dot and ends at the last dot */
 #education .timeline-item:first-of-type::before,
 #experience .timeline-item:first-of-type::before,
-#awards .timeline-item:first-of-type::before {
+#awards .timeline-item:first-of-type::before,
+#activities .timeline-item:first-of-type::before {
   top: 0.65rem;
   height: calc(100% - 0.65rem);
 }
 #education .timeline-item:last-of-type::before,
 #experience .timeline-item:last-of-type::before,
-#awards .timeline-item:last-of-type::before {
+#awards .timeline-item:last-of-type::before,
+#activities .timeline-item:last-of-type::before {
   height: 0.65rem;
 }
 /* the dot */
 #education .timeline-item::after,
 #experience .timeline-item::after,
-#awards .timeline-item::after {
+#awards .timeline-item::after,
+#activities .timeline-item::after {
   content: "";
   position: absolute;
   left: 0;
@@ -11176,7 +11182,9 @@ section.resume-section .resume-section-content {
 
 /* Education / Experience: organization logo to the left of each timeline entry */
 #education .org-logo,
-#experience .org-logo {
+#experience .org-logo,
+#awards .org-logo,
+#activities .org-logo {
   flex: 0 0 auto;
   width: 4.5rem;
   height: 3.5rem;
@@ -11186,7 +11194,9 @@ section.resume-section .resume-section-content {
 }
 @media (max-width: 767.98px) {
   #education .org-logo,
-  #experience .org-logo {
+  #experience .org-logo,
+  #awards .org-logo,
+  #activities .org-logo {
     width: 3.5rem;
     height: 2.75rem;
     margin-right: 0.85rem;
