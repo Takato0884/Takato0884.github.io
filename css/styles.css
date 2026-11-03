@@ -11202,3 +11202,127 @@ section.resume-section .resume-section-content {
     margin-right: 0.85rem;
   }
 }
+
+/* --- Hand-drawn accents (warmth without hurting readability) ---
+   Only headings, dividers, small tags and the profile photo get the
+   hand-drawn treatment; body text, paper titles and lists stay as-is. */
+
+/* Section headings: handwritten font + marker-pen underline */
+section.resume-section h2 {
+  position: relative;
+  display: inline-block;
+  font-family: "Kalam", "Yusei Magic", cursive;
+  font-synthesis: none;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  color: #1d3557;
+  z-index: 0;
+}
+section.resume-section h2::after {
+  content: "";
+  position: absolute;
+  left: -0.2em;
+  right: -0.3em;
+  bottom: 0.02em;
+  height: 0.38em;
+  z-index: -1;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'%3E%3Cpath d='M3 12 C 40 6, 80 15, 120 9 S 180 7, 197 11 L 196 17 C 160 14, 120 19, 80 16 S 25 18, 4 17 Z' fill='%238fb8e0' fill-opacity='0.5'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+}
+
+/* Name subtitle under the big heading: a little handwritten touch */
+#about .subheading.mb-2 {
+  font-family: "Kalam", cursive;
+  text-transform: none;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+/* Profile photos: slightly irregular, sketch-like ring */
+.img-profile-about {
+  border: 0.3rem solid rgba(29, 53, 87, 0.18);
+  border-radius: 52% 48% 50% 50% / 48% 52% 48% 52% !important;
+}
+
+/* Small tags (Oral / Poster / IF): wobbly hand-cut corners */
+.pub-type {
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  border: 1px solid currentColor;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Social icons: a playful tilt on hover */
+.social-icons .social-icon {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.social-icons .social-icon:hover {
+  transform: rotate(-8deg) scale(1.05);
+}
+
+/* Name heading: same handwritten font as section headings */
+#about h1 {
+  font-family: "Kalam", "Yusei Magic", cursive;
+  font-synthesis: none;
+  font-weight: 700;
+  text-transform: none;
+}
+html[lang="ja"] #about h1 {
+  word-spacing: -0.2em;
+}
+
+/* --- Hero: About section over the mountain-dawn photo --- */
+section.resume-section#about {
+  max-width: none;
+  min-height: 100vh;
+  position: relative;
+  color: rgba(255, 255, 255, 0.86);
+  background:
+    linear-gradient(100deg, rgba(8, 20, 48, 0.72) 0%, rgba(8, 20, 48, 0.45) 45%, rgba(8, 20, 48, 0.05) 75%),
+    linear-gradient(to bottom, rgba(8, 20, 48, 0) 60%, rgba(8, 20, 48, 0.55) 100%),
+    url("../img/hero.jpg") center 62% / cover no-repeat;
+  background-color: #0f1f45;
+}
+#about .resume-section-content {
+  max-width: 69rem;
+}
+#about h1,
+#about .text-primary {
+  color: #fff !important;
+  text-shadow: 0 2px 18px rgba(0, 10, 40, 0.45);
+}
+/* given name picks up the warm glow on the horizon */
+#about h1 .text-primary {
+  color: #f5b39a !important;
+}
+#about .subheading,
+#about .subheading.mb-2 {
+  color: rgba(255, 255, 255, 0.78);
+}
+#about p.lead {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 44rem;
+  text-shadow: 0 1px 10px rgba(0, 10, 40, 0.5);
+}
+#about .keywords {
+  color: rgba(255, 255, 255, 0.82);
+}
+#about .keywords strong {
+  color: #f5b39a;
+}
+#about .social-icons .social-icon {
+  background-color: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+#about .social-icons .social-icon:hover {
+  background-color: #f5b39a;
+  color: #1d3557;
+}
+#about .img-profile-about {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* no squiggle divider directly under the hero */
+#about + hr.m-0 {
+  display: none;
+}
